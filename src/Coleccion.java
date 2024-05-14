@@ -2,15 +2,27 @@ import java.util.List;
 import java.util.ArrayList;
 
 public class Coleccion {
-    List<String> listaDatos = new ArrayList<>();
+    List<DatosPersonales> listaDatos = new ArrayList<>();
 
-    public void add(String nombre){
-        listaDatos.add(nombre);
+    public void add(DatosPersonales datos){
+        listaDatos.add(datos);
     }
 
     public void show(){
-        for (String dato : listaDatos){
+        for (DatosPersonales dato : listaDatos){
             System.out.println(dato);
         }
+    }
+
+    public void show2(){
+        listaDatos.forEach(dato -> System.out.println(dato));
+    }
+
+    public  void buscar(String nombre){
+        listaDatos.forEach((dato ->{
+            if (dato.getNombre().equals(nombre)){
+                System.out.println(dato);
+            }
+        }));
     }
 }

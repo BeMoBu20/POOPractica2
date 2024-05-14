@@ -22,4 +22,8 @@ public class DatosPersonales {
     public void setApellidos(String apellidos) {
         this.apellidos = apellidos;
     }
+
+    public String toString(){
+        return nombre + " " + apellidos;
+    }
 }

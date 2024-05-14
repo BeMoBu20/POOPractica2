@@ -5,12 +5,13 @@ public class Main {
         System.out.println(obj.getNombre());*/
 
         Coleccion objc = new Coleccion();
-        objc.add("Javier");
-        objc.add("Pedrito");
-        objc.add("Joshua");
-        objc.add("Emmanuel");
-        objc.add("Brenda");
 
-        objc.show();
+        objc.add(new DatosPersonales("Javier","Mendez"));
+        objc.add(new DatosPersonales("Pedrito","Perez"));
+        objc.add(new DatosPersonales("Joshua","Salas"));
+
+        /*objc.show2();*/
+
+        objc.buscar("Pedrito");
     }
 }
